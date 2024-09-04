@@ -1,0 +1,25 @@
+@startuml
+actor User
+participant "EMF OSGi" as EMF
+participant "EPackage Init" as PI
+participant "MAC Initializer" as MAI
+database "MongoDB" as DB
+
+=== start activate MAI ==
+MAI -> DB: getAllConfigs
+DB --> MAI: allConfigs
+activate MAI
+MAI -> MAI: initializeCache
+=== end activate MAI ==
+MAI --> PI: inject 
+EMF --> PI: register EPackage
+activate PI
+PI -> MAI: getConfigForNS
+MAI --> PI: Config
+note left of PI
+Update properties or lifecycle state
+end note
+PI -> PI: updateConfig
+PI -> MAI: updateConfiguration
+
+@enduml

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA; &#xA;Contributors:&#xA;     Data In Motion - initial API and implementation"
+    modelDirectory="/org.eclipse.gecko.ma.model/src" modelPluginID="org.eclipse.gecko.ma.model"
+    modelName="MAConfig" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore" operationReflection="true"
+    importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>ma-config.ecore</foreignModel>
+  <genPackages prefix="Maconfig" basePackage="org.eclipse.gecko.ma" resource="XMI"
+      disposableProviderFactory="true" fileExtensions="maconfig" ecorePackage="ma-config.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ma-config.ecore#//SourceType">
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//SourceType/DIRECT"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//SourceType/DYNAMIC"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//SourceType/MONGO"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//SourceType/EXTENDER"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//SourceType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ma-config.ecore#//ConfigurationStage">
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationStage/UNCONFIGURED"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationStage/DRAFT"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationStage/ACTIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationStage/INACTIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationStage/DEPRECATED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ma-config.ecore#//ConfigurationLifecycle">
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/LOADED"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/REGISTERING"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/REGISTERED"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/UNREGISTERING"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/UNREGISTERED"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/UPDATING"/>
+      <genEnumLiterals ecoreEnumLiteral="ma-config.ecore#//ConfigurationLifecycle/UPDATED"/>
+    </genEnums>
+    <genClasses ecoreClass="ma-config.ecore#//PackageModelConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/pid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/nsUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/sourceUri"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ma-config.ecore#//PackageModelConfiguration/ePackageRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/restInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/sourceType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/stage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ma-config.ecore#//PackageModelConfiguration/lifecycle"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

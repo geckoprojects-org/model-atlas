@@ -1,0 +1,12 @@
+-buildpath: \
+	org.osgi.service.jakartars;version=latest,\
+	org.osgi.service.http.whiteboard;version=latest,\
+	org.osgi.service.cm;version=latest,\
+	org.eclipse.emf.ecore;verison=latest,\
+	org.gecko.emf.repository.mongo;version=latest,\
+	org.gecko.emf.rest.jakartars;version=latest,\
+	org.gecko.emf.util.annotations;version=latest,\
+	org.eclipse.gecko.ma.model;version=project
+	
+Bundle-Name: Model Atlas API
+Bundle-Description: Model Atlas API

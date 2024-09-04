@@ -1,0 +1,18 @@
+-buildpath: \
+	org.osgi.service.component.annotations;version=latest,\
+	org.osgi.service.servlet;version=latest,\
+	org.osgi.service.cm;version=latest,\
+	org.osgi.service.http.whiteboard;version=latest,\
+	io.swagger.core.v3.swagger-annotations;version=latest,\
+	org.gecko.emf.repository.api;version=latest,\
+	org.gecko.emf.mongo.api;version=latest,\
+	org.eclipse.gecko.ma.api;version=project,\
+	org.eclipse.gecko.ma.model;version=project
+
+-library: \
+	enable-emf,\
+	enableJakartaREST
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Model Atlas REST
+Bundle-Description: Model Atlas REST Interface

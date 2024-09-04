@@ -1,0 +1,25 @@
+-buildpath: \
+	org.osgi.service.component.annotations;version=latest,\
+	org.osgi.service.cm;version=latest,\
+	org.osgi.service.jakartars;version=latest,\
+	org.osgi.service.http.whiteboard;verison=latest,\
+	jakarta.ws.rs-api;version=latest,\
+	com.fasterxml.jackson.core.jackson-databind;version=latest,\
+	com.fasterxml.jackson.core.jackson-core;version=latest,\
+	io.swagger.core.v3.swagger-jaxrs2.jakarta;version=latest,\
+	io.swagger.core.v3.swagger-core.jakarta;version=latest,\
+	io.swagger.core.v3.swagger-annotations;version=latest,\
+	io.swagger.core.v3.swagger-integration.jakarta;version=latest,\
+	io.swagger.core.v3.swagger-models.jakarta;version=latest,\
+	org.apache.felix.http.servlet-api;version=latest,\
+	org.eclipse.gecko.ma.api;version=project,\
+	org.eclipse.gecko.ma.model;version=project
+	
+-library: \
+	enable-emf
+	
+-includeresource.swagger: \
+	swagger-api=@https://github.com/swagger-api/swagger-ui/archive/refs/tags/v3.52.3.zip!/swagger-ui-3.52.3/dist/(*);rename:=$1,\
+	swagger-api=swagger
+Bundle-Name: Model Atlas OpenAPI
+Bundle-Description: Model Atlas Open API / Swagger Support

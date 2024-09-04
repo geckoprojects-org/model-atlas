@@ -1,0 +1,20 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"JakartarsServletWhiteboardRuntimeComponent~restConfigMa":
+	{
+		"jersey.jakartars.whiteboard.name" : "REST_ConfigMA",
+		"jersey.context.path" : "configuration",
+		"osgi.http.whiteboard.target" : "(id=httpMa)"
+	},
+	"ModelConfigurationManager~Default":
+	{
+		"registry.name": "Default",
+		"config.repo.target": "(repo_id=ma.modelatlas)"
+	},
+	"ModelConfigurationManager~Test":
+	{
+		"registry.name": "Test",
+		"config.repo.target": "(repo_id=ma.testatlas)"
+	}
+}

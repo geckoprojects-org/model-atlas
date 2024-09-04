@@ -1,0 +1,19 @@
+Bundle-Name: Model Atlas Runtime
+Bundle-Description: Model Atlas Basic Runtime
+
+-library: \
+	enable-emf
+
+-buildpath: \
+	org.osgi.service.cm;version=latest,\
+	org.eclipse.gecko.ma.api;version=project,\
+	org.eclipse.gecko.ma.model;version=project,\
+	org.gecko.emf.util.common;version=latest,\
+	org.gecko.emf.repository.api;version=latest,\
+	org.gecko.emf.repository.mongo;version=latest,\
+	org.gecko.emf.util.annotations;version=latest,\
+	org.osgi.util.function;version=latest,\
+	org.osgi.util.promise;version=latest,\
+	org.osgi.service.component;version=latest,\
+	org.eclipse.gecko.ma.example.model;version=latest,\
+	org.osgi.util.tracker

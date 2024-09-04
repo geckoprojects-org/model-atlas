@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="config" nsURI="https://eclipse.org/model-atlas/configuration/1.0"
+    nsPrefix="mac">
+  <eAnnotations source="Version">
+    <details key="value" value="1.0"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="basePackage" value="org.eclipse.gecko.ma"/>
+    <details key="copyrightText" value="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA; &#xA;Contributors:&#xA;     Data In Motion - initial API and implementation"/>
+    <details key="complianceLevel" value="17.0"/>
+    <details key="modelDirectory" value="/org.eclipse.gecko.ma.model/src"/>
+    <details key="oSGiCompatible" value="true"/>
+    <details key="fileExtensions" value="maconfig"/>
+    <details key="resource" value="XMI"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="PackageModelConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pid" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nsUri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ePackageRef" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EPackage"
+        eKeys="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EPackage/nsURI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restInterface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceType" eType="#//SourceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stage" eType="#//ConfigurationStage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lifecycle" eType="#//ConfigurationLifecycle"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SourceType">
+    <eLiterals name="DIRECT">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Models come out of the registry. The models are packaged within the application as bundle"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="DYNAMIC" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Models are loaded using Gecko EMF OSGi's DynamicPackageLoader"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="MONGO" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Models are persisted in the MongoDB, attached to this model atlas instance"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="EXTENDER" value="3"/>
+    <eLiterals name="OTHER" value="4">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Models are persisted elsewhere. A custom implementation in the MongoDB, attached to this model atlas instance"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConfigurationStage">
+    <eLiterals name="UNCONFIGURED"/>
+    <eLiterals name="DRAFT" value="1"/>
+    <eLiterals name="ACTIVE" value="2"/>
+    <eLiterals name="INACTIVE" value="3"/>
+    <eLiterals name="DEPRECATED" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConfigurationLifecycle">
+    <eLiterals name="LOADED"/>
+    <eLiterals name="REGISTERING" value="1"/>
+    <eLiterals name="REGISTERED" value="2"/>
+    <eLiterals name="UNREGISTERING" value="3"/>
+    <eLiterals name="UNREGISTERED" value="4"/>
+    <eLiterals name="UPDATING" value="5"/>
+    <eLiterals name="UPDATED" value="6"/>
+  </eClassifiers>
+</ecore:EPackage>

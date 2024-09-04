@@ -1,0 +1,25 @@
+@startuml
+actor User
+participant ConfigAdmin as CM
+participant "EPackage Configurator" as PC
+participant "MAC Initializer" as MAI
+database "MongoDB" as DB
+participant "Registry" as REG
+
+=== start activate MAI ==
+MAI -> DB: getAllConfigs
+DB --> MAI: allConfigs
+activate MAI
+MAI -> MAI: initializeCache
+=== end activate MAI ==
+MAI --> PC: inject 
+CM --> PC: inject
+=== start activate PC ==
+activate PC
+PC -> MAI: getConfigForSourceType::MONGO, DYNAMIC
+MAI --> PC: configs
+PC -> CM: register Configuration with ma.config.id
+CM -> REG: EPackage (ma.config.id=*)
+=== end activate PC ==
+
+@enduml

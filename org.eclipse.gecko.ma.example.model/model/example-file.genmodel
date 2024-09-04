@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gecko.ma.example.model/src" modelPluginID="org.eclipse.gecko.ma.example.model"
+    modelName="example-file" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>example-file.ecore</foreignModel>
+  <genPackages prefix="ExamplePrefix" basePackage="org.eclipse.gecko.ma.example.model"
+      resource="XMI" disposableProviderFactory="true" ecorePackage="example-file.ecore#/">
+    <genClasses ecoreClass="example-file.ecore#//Example">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute example-file.ecore#//Example/test"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

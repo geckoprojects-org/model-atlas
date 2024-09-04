@@ -1,0 +1,18 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"org.apache.felix.http~httpMa":
+	{
+		"org.osgi.service.http.port": "8082",
+		"org.osgi.service.http.host": "localhost",
+		"org.apache.felix.http.context_path": "/atlas",
+		"org.apache.felix.http.name": "HTTP_MA",
+		"org.apache.felix.http.runtime.init.id": "httpMa"
+	},
+	"JakartarsServletWhiteboardRuntimeComponent~restMa":
+	{
+		"jersey.jakartars.whiteboard.name" : "REST_MA",
+		"jersey.context.path" : "rest",
+		"osgi.http.whiteboard.target" : "(id=httpMa)"
+	}
+}
